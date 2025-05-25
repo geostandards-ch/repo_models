@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- File MiniCoordSysData.xtf 2014-08-05 (http://www.interlis.ch/models/refhb24) -->
+
+<ili:transfer xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS"
+  xmlns:geom="http://www.interlis.ch/geometry/1.0"
+  xmlns="http://www.interlis.ch/xtf/2.4/CoordSys"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ili:headersection>
+    <ili:models>
+      <ili:model>CoordSys</ili:model>
+    </ili:models>
+    <ili:sender>KOGIS</ili:sender>
+    <ili:comment>example dataset ili2 refmanual appendix K</ili:comment>
+  </ili:headersection>
+
+  <ili:datasection>
+    <CoordsysTopic ili:bid="BCoordSys">
+      <Ellipsoid ili:tid="BCoordSys.Bessel">
+        <ili:Name>Bessel</ili:Name>
+        <EllipsoidAlias>Bessel (1841)</EllipsoidAlias>
+        <SemiMajorAxis>6377397.1550</SemiMajorAxis>
+        <InverseFlattening>299.1528128</InverseFlattening>
+        <Remarks>Documentation swisstopo 19031266</Remarks>
+      </Ellipsoid>
+
+      <Ellipsoid ili:tid="BCoordSys.ETRS">
+        <ili:Name>ETRS</ili:Name>
+        <EllipsoidAlias>ETRS 89</EllipsoidAlias>
+        <SemiMajorAxis>6378137.000</SemiMajorAxis>
+        <InverseFlattening>298.2572235</InverseFlattening>
+        <Remarks>EUREF documentation</Remarks>
+      </Ellipsoid>
+
+      <GravityModel ili:tid="BCoordSys.SwissGravityNetwork2004">
+        <ili:Name>SwissGravityNetwork2004</ili:Name>
+        <Definition>See documentation swisstopo Landesschwerenetz</Definition>
+      </GravityModel>
+
+      <GravityModel ili:tid="BCoordSys.UEGN2002">
+        <ili:Name>UEGN2002</ili:Name>
+        <Definition>EGG07 documentation IAG Symposium Series Vol 133</Definition>
+      </GravityModel>
+
+      <GeoidModel ili:tid="BCoordSys.CHGeoid2004">
+        <ili:Name>CHGeoid2004</ili:Name>
+        <Definition>See new Swiss Geoid swisstopo</Definition>
+      </GeoidModel>
+
+      <GeoidModel ili:tid="BCoordSys.EGG">
+        <ili:Name>EGG</ili:Name>
+        <Definition>EGG07 documentation IAG Symposium Series Vol 133</Definition>
+      </GeoidModel>
+
+      <GeoHeight ili:tid="BCoordSys.SwissOrthometricAlt">
+        <ili:Name>SwissOrthometricAlt</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>h</ShortName>
+            <Description>Swiss Orthometric Altitude</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <System>orthometric</System>
+        <ReferenceHeight>373.600</ReferenceHeight>
+        <ReferenceHeightDescr>Pierre du Niton</ReferenceHeightDescr>
+        <EllipsoidRef ili:ref="BCoordSys.Bessel"/>
+        <GeoidRef ili:ref="BCoordSys.CHGeoid2004"/>
+        <GravityRef ili:ref="BCoordSys.SwissGravityNetwork2004"/>
+      </GeoHeight>
+
+      <GeoHeight ili:tid="BCoordSys.SwissEllipsoidalAlt">
+        <ili:Name>SwissEllipsoidalAlt</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>H</ShortName>
+            <Description>Swiss Ellipsoidal Altitude</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <System>ellipsoidal</System>
+        <ReferenceHeight>0.000</ReferenceHeight>
+        <ReferenceHeightDescr>Sea level</ReferenceHeightDescr>
+        <EllipsoidRef ili:ref="BCoordSys.Bessel"/>
+        <GeoidRef ili:ref="BCoordSys.CHGeoid2004"/>
+        <GravityRef ili:ref="BCoordSys.SwissGravityNetwork2004"/>
+      </GeoHeight>
+
+      <GeoHeight ili:tid="BCoordSys.SwissUsualAlt">
+        <ili:Name>SwissUsualAlt</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>H</ShortName>
+            <Description>Swiss Usual Altitude</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <System>other</System>
+        <ReferenceHeight>373.600</ReferenceHeight>
+        <ReferenceHeightDescr>Pierre du Niton</ReferenceHeightDescr>
+        <EllipsoidRef ili:ref="BCoordSys.Bessel"/>
+        <GeoidRef ili:ref="BCoordSys.CHGeoid2004"/>
+        <GravityRef ili:ref="BCoordSys.SwissGravityNetwork2004"/>
+      </GeoHeight>
+
+      <GeoHeight ili:tid="BCoordSys.EuropeanNormalAlt">
+        <ili:Name>EuropeanNormalAlt</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>H</ShortName>
+            <Description>European Normal Altitude</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <System>normal</System>
+        <ReferenceHeight>0</ReferenceHeight>
+        <ReferenceHeightDescr>Normaal Amsterdam Peil</ReferenceHeightDescr>
+        <EllipsoidRef ili:ref="BCoordSys.ETRS"/>
+        <GeoidRef ili:ref="BCoordSys.EGG"/>
+        <GravityRef ili:ref="BCoordSys.UEGN2002"/>
+      </GeoHeight>
+
+      <GeoCartesian2D ili:tid="BCoordSys.MathCOORD2">
+        <ili:Name>MathCOORD2</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>X</ShortName>
+            <Description>X-axis</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+        <LengthAXIS>
+            <ShortName>Y</ShortName>
+            <Description>Y-axis</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Mathematical Cartesian 2D Refsystem</Definition>
+      </GeoCartesian2D>
+
+      <GeoCartesian2D ili:tid="BCoordSys.CHLV03">
+        <ili:Name>CHLV03</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>Y</ShortName>
+            <Description>East-value</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>X</ShortName>
+            <Description>North-value</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Swiss Geodetic Cartesian 2D Refsystem 1903</Definition>
+      </GeoCartesian2D>
+
+      <GeoCartesian2D ili:tid="BCoordSys.CHLV95">
+        <ili:Name>CHLV95</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>Y</ShortName>
+            <Description>East-value</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>X</ShortName>
+            <Description>North-value</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Swiss Geodetic Cartesian 2D Refsystem 1995</Definition>
+      </GeoCartesian2D>
+
+      <GeoCartesian3D ili:tid="BCoordSys.MathCOORD3">
+        <ili:Name>MathCOORD3</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>X</ShortName>
+            <Description>X-axis</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>Y</ShortName>
+            <Description>Y-axis</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>Z</ShortName>
+            <Description>Z-axis</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Mathematical Cartesian 3D Refsystem</Definition>
+      </GeoCartesian3D>
+
+      <GeoCartesian3D ili:tid="BCoordSys.CH1903">
+        <ili:Name>CH1903</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>XC</ShortName>
+            <Description>Equator Greenwich</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>YC</ShortName>
+            <Description>Equator East</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>ZC</ShortName>
+            <Description>North</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Swiss Geodetic Cartesian 3D Refsystem 1903</Definition>
+      </GeoCartesian3D>
+
+      <GeoCartesian3D ili:tid="BCoordSys.CH1903plus">
+        <ili:Name>CH1903plus</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>XC</ShortName>
+            <Description>Equator Greenwich</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>YC</ShortName>
+            <Description>Equator East</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>ZC</ShortName>
+            <Description>North</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>Swiss Geodetic Cartesian 3D Refsystem 1995</Definition>
+      </GeoCartesian3D>
+
+      <GeoCartesian3D ili:tid="BCoordSys.WGS84">
+        <ili:Name>WGS84</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>XW</ShortName>
+            <Description>Equator Greenwich</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>YW</ShortName>
+            <Description>Equator East</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>ZW</ShortName>
+            <Description>North</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>World Geodetic System 1984</Definition>
+      </GeoCartesian3D>
+
+      <GeoCartesian3D ili:tid="BCoordSys.ETRS89">
+        <ili:Name>ETRS89</ili:Name>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>XW</ShortName>
+            <Description>Equator Greenwich</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>YW</ShortName>
+            <Description>Equator East</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <LengthAXIS>
+            <ShortName>ZW</ShortName>
+            <Description>North</Description>
+          </LengthAXIS>
+        </ili:Axis>
+        <Definition>European Terrestrial Reference System 1989</Definition>
+      </GeoCartesian3D>
+
+      <GeoEllipsoidal ili:tid="BCoordSys.Switzerland">
+        <ili:Name>Switzerland</ili:Name>
+        <ili:Axis>
+          <AngleAXIS>
+            <ShortName>Lat</ShortName>
+            <Description>Latitude</Description>
+          </AngleAXIS>
+        </ili:Axis>
+        <ili:Axis>
+          <AngleAXIS>
+            <ShortName>Long</ShortName>
+            <Description>Longitude</Description>
+          </AngleAXIS>
+        </ili:Axis>
+        <Definition>Coordinates on the Swiss Ellipsoid 1903</Definition>
+        <EllipsoidRef ili:ref="BCoordSys.Bessel"/>
+      </GeoEllipsoidal>
+
+      <ToGeoEllipsoidal>
+        <From ili:ref="BCoordSys.CH1903"></From>
+        <To ili:ref="BCoordSys.Switzerland"></To>
+        <ToHeight ili:ref="BCoordSys.SwissEllipsoidalAlt"></ToHeight>
+      </ToGeoEllipsoidal>
+
+      <ToGeoCartesian3D>
+        <From2 ili:ref="BCoordSys.Switzerland"></From2>
+        <FromHeight ili:ref="BCoordSys.SwissEllipsoidalAlt"></FromHeight>
+        <To3 ili:ref="BCoordSys.CH1903"></To3>
+      </ToGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.CH1903"></From>
+        <To2 ili:ref="BCoordSys.WGS84"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>674.374</ShiftAxis1>
+        <ShiftAxis2>15.056</ShiftAxis2>
+        <ShiftAxis3>405.346</ShiftAxis3>
+        <RotationAxis1>0:0:0</RotationAxis1>
+        <RotationAxis2>0:0:0</RotationAxis2>
+        <RotationAxis3>0:0:0</RotationAxis3>
+        <NewScale>1.00</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.WGS84"></From>
+        <To2 ili:ref="BCoordSys.CH1903"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>-674.374</ShiftAxis1>
+        <ShiftAxis2>-15.056</ShiftAxis2>
+        <ShiftAxis3>-405.346</ShiftAxis3>
+        <RotationAxis1>-0:0:0</RotationAxis1>
+        <RotationAxis2>-0:0:0</RotationAxis2>
+        <RotationAxis3>-0:0:0</RotationAxis3>
+        <NewScale>1.0</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.CH1903plus"></From>
+        <To2 ili:ref="BCoordSys.WGS84"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>674.374</ShiftAxis1>
+        <ShiftAxis2>15.056</ShiftAxis2>
+        <ShiftAxis3>405.346</ShiftAxis3>
+        <RotationAxis1>0:0:0</RotationAxis1>
+        <RotationAxis2>0:0:0</RotationAxis2>
+        <RotationAxis3>0:0:0</RotationAxis3>
+        <NewScale>1.00</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.WGS84"></From>
+        <To2 ili:ref="BCoordSys.CH1903plus"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>-674.374</ShiftAxis1>
+        <ShiftAxis2>-15.056</ShiftAxis2>
+        <ShiftAxis3>-405.346</ShiftAxis3>
+        <RotationAxis1>-0:0:0</RotationAxis1>
+        <RotationAxis2>-0:0:0</RotationAxis2>
+        <RotationAxis3>-0:0:0</RotationAxis3>
+        <NewScale>1.0</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.CH1903"></From>
+        <To2 ili:ref="BCoordSys.ETRS89"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>674.374</ShiftAxis1>
+        <ShiftAxis2>15.056</ShiftAxis2>
+        <ShiftAxis3>405.346</ShiftAxis3>
+        <RotationAxis1>0:0:0</RotationAxis1>
+        <RotationAxis2>0:0:0</RotationAxis2>
+        <RotationAxis3>0:0:0</RotationAxis3>
+        <NewScale>1.00</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.ETRS89"></From>
+        <To2 ili:ref="BCoordSys.CH1903"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>-674.374</ShiftAxis1>
+        <ShiftAxis2>-15.056</ShiftAxis2>
+        <ShiftAxis3>-405.346</ShiftAxis3>
+        <RotationAxis1>-0:0:0</RotationAxis1>
+        <RotationAxis2>-0:0:0</RotationAxis2>
+        <RotationAxis3>-0:0:0</RotationAxis3>
+        <NewScale>1.0</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.CH1903plus"></From>
+        <To2 ili:ref="BCoordSys.ETRS89"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>674.374</ShiftAxis1>
+        <ShiftAxis2>15.056</ShiftAxis2>
+        <ShiftAxis3>405.346</ShiftAxis3>
+        <RotationAxis1>0:0:0</RotationAxis1>
+        <RotationAxis2>0:0:0</RotationAxis2>
+        <RotationAxis3>0:0:0</RotationAxis3>
+        <NewScale>1.00</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <BidirectGeoCartesian3D>
+        <From ili:ref="BCoordSys.ETRS89"></From>
+        <To2 ili:ref="BCoordSys.CH1903plus"></To2>
+        <Precision>measure_based</Precision>
+        <ShiftAxis1>-674.374</ShiftAxis1>
+        <ShiftAxis2>-15.056</ShiftAxis2>
+        <ShiftAxis3>-405.346</ShiftAxis3>
+        <RotationAxis1>-0:0:0</RotationAxis1>
+        <RotationAxis2>-0:0:0</RotationAxis2>
+        <RotationAxis3>-0:0:0</RotationAxis3>
+        <NewScale>1.0</NewScale>
+      </BidirectGeoCartesian3D>
+
+      <TransverseMercator>
+        <From5 ili:ref="BCoordSys.Switzerland"></From5>
+        <To5 ili:ref="BCoordSys.CHLV03"></To5>
+        <FromCo1_FundPt>46:57:08.66</FromCo1_FundPt>
+        <FromCo2_FundPt>7:26:22.50</FromCo2_FundPt>
+        <ToCoord1_FundPt>600000</ToCoord1_FundPt>
+        <ToCoord2_FundPt>200000</ToCoord2_FundPt>
+      </TransverseMercator>
+
+      <TransverseMercator>
+        <From5 ili:ref="BCoordSys.Switzerland"></From5>
+        <To5 ili:ref="BCoordSys.CHLV95"></To5>
+        <FromCo1_FundPt>46:57:08.66</FromCo1_FundPt>
+        <FromCo2_FundPt>7:26:22.50</FromCo2_FundPt>
+        <ToCoord1_FundPt>2600000</ToCoord1_FundPt>
+        <ToCoord2_FundPt>1200000</ToCoord2_FundPt>
+      </TransverseMercator>
+
+      <HeightConversion>
+        <FromHeight ili:ref="BCoordSys.SwissEllipsoidalAlt"></FromHeight>
+        <ToHeight ili:ref="BCoordSys.SwissOrthometricAlt"></ToHeight>
+      </HeightConversion>
+
+      <HeightConversion>
+        <FromHeight ili:ref="BCoordSys.SwissOrthometricAlt"></FromHeight>
+        <ToHeight ili:ref="BCoordSys.SwissEllipsoidalAlt"></ToHeight>
+      </HeightConversion>
+    </CoordsysTopic>
+  </ili:datasection>
+</ili:transfer>

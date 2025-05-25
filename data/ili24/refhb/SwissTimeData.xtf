@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- File SwissTimeData.xtf 2014-08-05 (http://www.interlis.ch/models/refhb24) -->
+
+<ili:transfer xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS"
+  xmlns:geom="http://www.interlis.ch/geometry/1.0"
+  xmlns="http://www.interlis.ch/xtf/2.4/Time"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ili:headersection>
+    <ili:models>
+      <ili:model>Time</ili:model>
+    </ili:models>
+    <ili:comment>example dataset ili2 refmanual appendix I</ili:comment>
+  </ili:headersection>
+  <ili:datasection>
+    <TimeZone ili:bid="BTimeZones">
+      <BaseTimeZone ili:tid="BTimeZones.MEZ">
+        <ili:Name>MEZ</ili:Name>
+        <DiffToUTC>-1:00</DiffToUTC>
+      </BaseTimeZone>
+
+      <DaylightSavingTZ ili:tid="BTimeZones.MESZ">
+        <ili:Name>MESZ</ili:Name>
+        <Periods>
+          <DaylightSavingPeriod>
+            <DSToUTC>-2:00</DSToUTC>
+            <From>1983</From>
+            <To>1995</To>
+            <DSStart>
+              <DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <DayOfYear>
+                    <Month>3</Month>
+                    <Day>25</Day>
+                  </DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </DSTransition>
+            </DSStart>
+            <DSEnd>
+              <DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <DayOfYear>
+                    <Month>9</Month>
+                    <Day>24</Day>
+                  </DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </DSTransition>
+            </DSEnd>
+          </DaylightSavingPeriod>
+        </Periods>
+        <Periods>
+          <DaylightSavingPeriod>
+            <DSToUTC>-2:00</DSToUTC>
+            <From>1996</From>
+            <To>2999</To>
+            <DSStart>
+              <DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <DayOfYear>
+                    <Month>3</Month>
+                    <Day>25</Day>
+                  </DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </DSTransition>
+            </DSStart>
+            <DSEnd>
+              <DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <DayOfYear>
+                    <Month>10</Month>
+                    <Day>25</Day>
+                  </DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </DSTransition>
+            </DSEnd>
+          </DaylightSavingPeriod>
+        </Periods>
+      </DaylightSavingTZ>
+
+      <DaylightSavingTZOf>
+        <BaseTZ ili:ref="BTimeZones.MEZ"></BaseTZ>
+        <DSTZ ili:ref="BTimeZones.MESZ"></DSTZ>
+      </DaylightSavingTZOf>
+    </TimeZone>
+  </ili:datasection>
+</ili:transfer>

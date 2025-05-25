@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- File RoadsExgm2ien_Symbols.xml 2005-06-16 (http://www.interlis.ch/models)>
+     2016-01-21 Geometry corrected (line 336) -->
+
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.interlis.ch/INTERLIS2.3
+                              RoadsExgm2ien_Symbols.xsd">
+  <HEADERSECTION VERSION="2.3" SENDER="KOGIS">
+    <MODELS>
+      <MODEL NAME="RoadsExdm2ben" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+      <MODEL NAME="RoadsExdm2ien" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+      <MODEL NAME="AbstractSymbology" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+      <MODEL NAME="StandardSymbology" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+      <MODEL NAME="RoadsExgm2ien" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+    </MODELS>
+
+    <ALIAS>
+      <ENTRIES FOR="RoadsExdm2ben">
+        <TAGENTRY FROM="RoadsExdm2ben.Roads"
+                  TO="RoadsExdm2ben.Roads"/>
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended"
+                  TO="RoadsExdm2ben.Roads"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.LAttrs"
+                  TO="RoadsExdm2ben.Roads.LAttrs"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.LandCover"
+                  TO="RoadsExdm2ben.Roads.LandCover"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.Street"
+                  TO="RoadsExdm2ben.Roads.Street"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.StreetAxis"
+                  TO="RoadsExdm2ben.Roads.StreetAxis"/>
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended.StreetAxis"
+                  TO="RoadsExdm2ben.Roads.StreetAxis"/>
+        <DELENTRY TAG="RoadsExdm2ien.RoadsExtended.StreetAxis"
+                  ATTR="Precision"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.StreetAxisAssoc"
+                  TO="RoadsExdm2ben.Roads.StreetAxisAssoc"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.StreetNamePosition"
+                  TO="RoadsExdm2ben.Roads.StreetNamePosition"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.StreetNamePositionAssoc"
+                  TO="RoadsExdm2ben.Roads.StreetNamePositionAssoc"/>
+        <TAGENTRY FROM="RoadsExdm2ben.Roads.RoadSign"
+                  TO="RoadsExdm2ben.Roads.RoadSign"/>
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended.RoadSign"
+                  TO="RoadsExdm2ben.Roads.RoadSign"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LAttrs" ATTR="LArt"
+                  FROM="welldefined" TO="welldefined"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LAttrs" ATTR="LArt"
+                  FROM="fuzzy" TO="fuzzy"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LandCover" ATTR="Type"
+                  FROM="building" TO="building"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LandCover" ATTR="Type"
+                  FROM="street" TO="street"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LandCover" ATTR="Type"
+                  FROM="water" TO="water"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.LandCover" ATTR="Type"
+                  FROM="other" TO="other"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.RoadSign" ATTR="Type"
+                  FROM="prohibition" TO="prohibition"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.RoadSign" ATTR="Type"
+                  FROM="indication" TO="indication"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.RoadSign" ATTR="Type"
+                  FROM="danger" TO="danger"/>
+        <VALENTRY TAG="RoadsExdm2ben.Roads.RoadSign" ATTR="Type"
+                  FROM="velocity" TO="velocity"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.noentry" TO="prohibition"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.noparking" TO="prohibition"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.other" TO="prohibition"/>
+      </ENTRIES>
+
+      <ENTRIES FOR="RoadsExdm2ien">
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended"
+                  TO="RoadsExdm2ien.RoadsExtended"/>
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended.StreetAxis"
+                  TO="RoadsExdm2ien.RoadsExtended.StreetAxis"/>
+        <TAGENTRY FROM="RoadsExdm2ien.RoadsExtended.RoadSign"
+                  TO="RoadsExdm2ien.RoadsExtended.RoadSign"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.noentry" TO="prohibition.noentry"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.noparking" TO="prohibition.noparking"/>
+        <VALENTRY TAG="RoadsExdm2ien.RoadsExtended.RoadSign" ATTR="Type"
+                  FROM="prohibition.other" TO="prohibition.other"/>
+      </ENTRIES>
+
+      <ENTRIES FOR="AbstractSymbology">
+        <TAGENTRY FROM="AbstractSymbology.Signs"
+                  TO="AbstractSymbology.Signs"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns"
+                  TO="AbstractSymbology.Signs"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.Color"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.FontSymbol_Polyline"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.FontSymbol_Surface"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.FontSymbol"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.Font"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.FontAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.LineStyle_Solid"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.LineStyle_SolidColorAssoc"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.LineStyle_SolidPolylineAttrsAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.DashRec"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.LineStyle_Dashed"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.LineStyle_DashedColorAssoc"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.LineStyle_DashedLineAttrsAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.Pattern_Symbol"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.LineStyle_Pattern"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.TextSign"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.TextSignFontAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.TextSignColorAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.TextSignClipFontAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SymbolSign"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SymbolSignSymbolAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SymbolSignClipSymbolAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SymbolSignColorAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.PolylineSign"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.PolylineSignColorAssoc"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.PolylineSignClipStyleAssoc"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.PolylineSignStartSymbolAssoc"/>
+        <DELENTRY TAG=
+          "StandardSymbology.StandardSigns.PolylineSignEndSymbolAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SurfaceSign"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SurfaceSignColorAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SurfaceSignBorderAssoc"/>
+        <DELENTRY TAG="StandardSymbology.StandardSigns.SurfaceSignHatchSymbAssoc"/>
+      </ENTRIES>
+
+      <ENTRIES FOR="StandardSymbology">
+        <TAGENTRY FROM="StandardSymbology.StandardSigns"
+                  TO="StandardSymbology.StandardSigns"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.Color"
+                  TO="StandardSymbology.StandardSigns.Color"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineAttrs"
+                  TO="StandardSymbology.StandardSigns.PolylineAttrs"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.FontSymbol_Polyline"
+                  TO="StandardSymbology.StandardSigns.FontSymbol_Polyline"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.FontSymbol_Surface"
+                  TO="StandardSymbology.StandardSigns.FontSymbol_Surface"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.FontSymbol"
+                  TO="StandardSymbology.StandardSigns.FontSymbol"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.Font"
+                  TO="StandardSymbology.StandardSigns.Font"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.FontAssoc"
+                  TO="StandardSymbology.StandardSigns.FontAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.LineStyle_Solid"
+                  TO="StandardSymbology.StandardSigns.LineStyle_Solid"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.LineStyle_SolidColorAssoc"
+                  TO="StandardSymbology.StandardSigns.LineStyle_SolidColorAssoc"/>
+        <TAGENTRY FROM=
+          "StandardSymbology.StandardSigns.LineStyle_SolidPolylineAttrsAssoc"
+                  TO=
+          "StandardSymbology.StandardSigns.LineStyle_SolidPolylineAttrsAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.DashRec"
+                  TO="StandardSymbology.StandardSigns.DashRec"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.LineStyle_Dashed"
+                  TO="StandardSymbology.StandardSigns.LineStyle_Dashed"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.LineStyle_DashedColorAssoc"
+                  TO="StandardSymbology.StandardSigns.LineStyle_DashedColorAssoc"/>
+        <TAGENTRY FROM=
+          "StandardSymbology.StandardSigns.LineStyle_DashedLineAttrsAssoc"
+                  TO=
+          "StandardSymbology.StandardSigns.LineStyle_DashedLineAttrsAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.Pattern_Symbol"
+                  TO="StandardSymbology.StandardSigns.Pattern_Symbol"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.LineStyle_Pattern"
+                  TO="StandardSymbology.StandardSigns.LineStyle_Pattern"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.TextSign"
+                  TO="StandardSymbology.StandardSigns.TextSign"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.TextSignFontAssoc"
+                  TO="StandardSymbology.StandardSigns.TextSignFontAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.TextSignColorAssoc"
+                  TO="StandardSymbology.StandardSigns.TextSignColorAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.TextSignClipFontAssoc"
+                  TO="StandardSymbology.StandardSigns.TextSignClipFontAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SymbolSign"
+                  TO="StandardSymbology.StandardSigns.SymbolSign"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SymbolSignSymbolAssoc"
+                  TO="StandardSymbology.StandardSigns.SymbolSignSymbolAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SymbolSignClipSymbolAssoc"
+                  TO="StandardSymbology.StandardSigns.SymbolSignClipSymbolAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SymbolSignColorAssoc"
+                  TO="StandardSymbology.StandardSigns.SymbolSignColorAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineSign"
+                  TO="StandardSymbology.StandardSigns.PolylineSign"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc"
+                  TO="StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineSignColorAssoc"
+                  TO="StandardSymbology.StandardSigns.PolylineSignColorAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineSignClipStyleAssoc"
+                  TO="StandardSymbology.StandardSigns.PolylineSignClipStyleAssoc"/>
+        <TAGENTRY FROM=
+          "StandardSymbology.StandardSigns.PolylineSignStartSymbolAssoc"
+                  TO=
+          "StandardSymbology.StandardSigns.PolylineSignStartSymbolAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.PolylineSignEndSymbolAssoc"
+                  TO="StandardSymbology.StandardSigns.PolylineSignEndSymbolAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SurfaceSign"
+                  TO="StandardSymbology.StandardSigns.SurfaceSign"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SurfaceSignColorAssoc"
+                  TO="StandardSymbology.StandardSigns.SurfaceSignColorAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SurfaceSignBorderAssoc"
+                  TO="StandardSymbology.StandardSigns.SurfaceSignBorderAssoc"/>
+        <TAGENTRY FROM="StandardSymbology.StandardSigns.SurfaceSignHatchSymbAssoc"
+                  TO="StandardSymbology.StandardSigns.SurfaceSignHatchSymbAssoc"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs" ATTR="Join"
+                  FROM="bevel" TO="bevel"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs" ATTR="Join"
+                  FROM="round" TO="round"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs" ATTR="Join"
+                  FROM="miter" TO="miter"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs" ATTR="Caps"
+                  FROM="round" TO="round"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.PolylineAttrs" ATTR="Caps"
+                  FROM="butt" TO="butt"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.Font" ATTR="Type"
+                  FROM="symbol" TO="symbol"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.Font" ATTR="Type"
+                  FROM="text" TO="text"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.SurfaceSign" ATTR="Clip"
+                  FROM="inside" TO="inside"/>
+        <VALENTRY TAG="StandardSymbology.StandardSigns.SurfaceSign" ATTR="Clip"
+                  FROM="outside" TO="outside"/>
+      </ENTRIES>
+
+      <ENTRIES FOR="RoadsExgm2ien">
+        <TAGENTRY FROM="RoadsExgm2ien.Graphics"
+                  TO="RoadsExgm2ien.Graphics"/>
+      </ENTRIES>
+    </ALIAS>
+
+    <COMMENT>
+      example symbology dataset ili2 refmanual appendix C
+    </COMMENT>
+  </HEADERSECTION>
+
+  <DATASECTION>
+    <StandardSymbology.StandardSigns BID="REFHANDB00000002">
+
+      <!-- Color Library -->
+      <StandardSymbology.StandardSigns.Color TID="1">
+        <Name>red</Name>
+        <L>40.0</L>
+        <C>70.0</C>
+        <H>0.0</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="2">
+        <Name>green</Name>
+        <L>49.4</L>
+        <C>48.5</C>
+        <H>153.36</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="3">
+        <Name>light_gray</Name>
+        <L>75.0</L>
+        <C>0.0</C>
+        <H>0.0</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="4">
+        <Name>dark_grey</Name>
+        <L>25.0</L>
+        <C>0.0</C>
+        <H>0.0</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="5">
+        <Name>dark_blue</Name>
+        <L>50.3</L>
+        <C>43.5</C>
+        <H>261.1</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="6">
+        <Name>black</Name>
+        <L>0.0</L>
+        <C>0.0</C>
+        <H>0.0</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.Color TID="7">
+        <Name>white</Name>
+        <L>100.0</L>
+        <C>0.0</C>
+        <H>0.0</H>
+        <T>1.0</T>
+      </StandardSymbology.StandardSigns.Color>
+
+      <StandardSymbology.StandardSigns.PolylineAttrs TID="4001">
+        <Width>0.01</Width>
+        <Join>round</Join>
+        <Caps>butt</Caps>
+      </StandardSymbology.StandardSigns.PolylineAttrs>
+
+      <StandardSymbology.StandardSigns.PolylineAttrs TID="4002">
+        <Width>0.01</Width>
+        <Join>miter</Join>
+        <MiterLimit>2.0</MiterLimit>
+        <Caps>butt</Caps>
+      </StandardSymbology.StandardSigns.PolylineAttrs>
+
+      <!-- Font/Symbol Library -->
+      <StandardSymbology.StandardSigns.FontSymbol TID="101">
+        <Name>Triangle</Name>
+        <Geometry>
+          <StandardSymbology.StandardSigns.FontSymbol_Surface>
+            <Geometry>
+              <SURFACE>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>-0.5</C1><C2>-0.5</C2></COORD>
+                    <COORD><C1>0.0</C1><C2>0.5</C2></COORD>
+                    <COORD><C1>0.5</C1><C2>-0.5</C2></COORD>
+                    <COORD><C1>-0.5</C1><C2>-0.5</C2></COORD>
+                  </POLYLINE>
+                </BOUNDARY>
+              </SURFACE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Surface>
+          <StandardSymbology.StandardSigns.FontSymbol_Polyline>
+            <Color REF="6"></Color>
+            <LineAttrs REF="4001"></LineAttrs>
+            <Geometry>
+              <POLYLINE>
+                <COORD><C1>-0.5</C1><C2>0.0</C2></COORD>
+                <ARC><C1>0.5</C1><C2>0.0</C2>
+                  <A1>0.0</A1><A2>0.5</A2><R>0.5</R>
+                </ARC>
+                <ARC><C1>-0.5</C1><C2>0.0</C2>
+                  <A1>0.0</A1><A2>-0.5</A2><R>0.5</R>
+                </ARC>
+              </POLYLINE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Polyline>
+        </Geometry>
+        <Font REF="10"></Font>
+      </StandardSymbology.StandardSigns.FontSymbol>
+
+      <StandardSymbology.StandardSigns.FontSymbol TID="102">
+        <Name>NoParking</Name>
+        <Geometry>
+          <StandardSymbology.StandardSigns.FontSymbol_Polyline>
+            <Color REF="6"></Color>
+            <LineAttrs REF="4001"></LineAttrs>
+            <Geometry>
+              <POLYLINE>
+                <COORD><C1>-0.5</C1><C2>0.0</C2></COORD>
+                <ARC><C1>0.5</C1><C2>0.0</C2>
+                  <A1>0.0</A1><A2>0.5</A2><R>0.5</R>
+                </ARC>
+                <ARC><C1>-0.5</C1><C2>0.0</C2>
+                  <A1>0.0</A1><A2>-0.5</A2><R>0.5</R>
+                </ARC>
+              </POLYLINE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Polyline>
+          <StandardSymbology.StandardSigns.FontSymbol_Surface>
+            <FillColor REF="1"></FillColor>
+            <Geometry>
+              <SURFACE>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+                    <ARC><C1>0.325</C1><C2>-0.233</C2>
+                      <A1>0.283</A1><A2>0.283</A2><R>0.4</R>
+                    </ARC>
+                    <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+                  </POLYLINE>
+                </BOUNDARY>
+              </SURFACE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Surface>
+          <StandardSymbology.StandardSigns.FontSymbol_Surface>
+            <FillColor REF="1"></FillColor>
+            <Geometry>
+              <SURFACE>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+                    <ARC><C1>-0.327</C1><C2>0.238</C2>
+                      <A1>-0.283</A1><A2>-0.283</A2><R>0.4</R>
+                    </ARC>
+                    <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+                  </POLYLINE>
+                </BOUNDARY>
+              </SURFACE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Surface>
+          <StandardSymbology.StandardSigns.FontSymbol_Surface>
+            <FillColor REF="5"></FillColor>
+            <Geometry>
+              <SURFACE>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>-0.5</C1><C2>0.0</C2></COORD>
+                    <ARC><C1>0.5</C1><C2>0.0</C2>
+                      <A1>0.0</A1><A2>0.5</A2><R>0.5</R>
+                    </ARC>
+                    <ARC><C1>-0.5</C1><C2>0.0</C2>
+                      <A1>0.0</A1><A2>-0.5</A2><R>0.5</R>
+                    </ARC>
+                  </POLYLINE>
+                </BOUNDARY>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+                    <ARC><C1>0.325</C1><C2>-0.233</C2>
+                      <A1>0.283</A1><A2>0.283</A2><R>0.4</R>
+                    </ARC>
+                    <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+                  </POLYLINE>
+                </BOUNDARY>
+                <BOUNDARY>
+                  <POLYLINE>
+                    <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+                    <ARC><C1>-0.327</C1><C2>0.238</C2>
+                      <A1>-0.283</A1><A2>-0.283</A2><R>0.4</R>
+                    </ARC>
+                    <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+                  </POLYLINE>
+                </BOUNDARY>
+              </SURFACE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Surface>
+          <StandardSymbology.StandardSigns.FontSymbol_Polyline>
+            <Color REF="7"></Color>
+            <LineAttrs REF="4001"></LineAttrs>
+            <Geometry>
+              <POLYLINE>
+                <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+                <ARC><C1>0.325</C1><C2>-0.233</C2>
+                  <A1>0.283</A1><A2>0.283</A2><R>0.4</R>
+                </ARC>
+                <COORD><C1>-0.233</C1><C2>0.325</C2></COORD>
+              </POLYLINE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Polyline>
+          <StandardSymbology.StandardSigns.FontSymbol_Polyline>
+            <Color REF="7"></Color>
+            <LineAttrs REF="4001"></LineAttrs>
+            <Geometry>
+              <POLYLINE>
+                <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+                <ARC><C1>-0.327</C1><C2>0.238</C2>
+                  <A1>-0.283</A1><A2>-0.283</A2><R>0.4</R>
+                </ARC>
+                <COORD><C1>0.228</C1><C2>-0.324</C2></COORD>
+              </POLYLINE>
+            </Geometry>
+          </StandardSymbology.StandardSigns.FontSymbol_Polyline>
+        </Geometry>
+        <Font REF="10"></Font>
+      </StandardSymbology.StandardSigns.FontSymbol>
+
+      <!-- Internal Symbol Font "Symbols" -->
+      <StandardSymbology.StandardSigns.Font TID="10">
+        <Name>Symbols</Name>
+        <Internal>true</Internal>
+        <Type>symbol</Type>
+      </StandardSymbology.StandardSigns.Font>
+
+      <!-- External Text Font "Leroy" -->
+      <StandardSymbology.StandardSigns.Font TID="11">
+        <Name>Leroy</Name>
+        <Internal>false</Internal>
+        <Type>text</Type>
+        <BottomBase>0.3</BottomBase>
+      </StandardSymbology.StandardSigns.Font>
+
+      <!-- Line Styles -->
+      <StandardSymbology.StandardSigns.LineStyle_Solid TID="21">
+        <Name>LineSolid_01</Name>
+        <Color REF="6"></Color>
+        <LineAttrs REF="4001"></LineAttrs>
+      </StandardSymbology.StandardSigns.LineStyle_Solid>
+
+      <StandardSymbology.StandardSigns.LineStyle_Dashed TID="22">
+        <Name>LineDashed_01</Name>
+        <Dashes>
+          <StandardSymbology.StandardSigns.DashRec>
+            <DLength>0.1</DLength>
+          </StandardSymbology.StandardSigns.DashRec>
+          <StandardSymbology.StandardSigns.DashRec>
+            <DLength>0.1</DLength>
+          </StandardSymbology.StandardSigns.DashRec>
+        </Dashes>
+        <Color REF="6"></Color>
+        <LineAttrs REF="4002"></LineAttrs>
+      </StandardSymbology.StandardSigns.LineStyle_Dashed>
+
+      <!-- Text Signs -->
+      <StandardSymbology.StandardSigns.TextSign TID="1001">
+        <Name>Linefont_18</Name>
+        <Height>1.8</Height>
+        <Font REF="11"></Font>
+      </StandardSymbology.StandardSigns.TextSign>
+
+      <!-- Symbol Signs -->
+      <StandardSymbology.StandardSigns.SymbolSign TID="2001">
+        <Name>GP</Name>
+        <Scale>1.0</Scale>
+        <Color REF="2"></Color>
+        <Symbol REF="101"></Symbol>
+      </StandardSymbology.StandardSigns.SymbolSign>
+
+      <StandardSymbology.StandardSigns.SymbolSign TID="2002">
+        <Name>NoParking</Name>
+        <Scale>1.0</Scale>
+        <Symbol REF="102"></Symbol>
+      </StandardSymbology.StandardSigns.SymbolSign>
+
+      <!-- Polyline Signs -->
+      <StandardSymbology.StandardSigns.PolylineSign TID="3001">
+        <Name>continuous</Name>
+        <Style REF="21">
+          <StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc>
+            <Offset>0.0</Offset>
+          </StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc>
+        </Style>
+      </StandardSymbology.StandardSigns.PolylineSign>
+
+      <StandardSymbology.StandardSigns.PolylineSign TID="3002">
+        <Name>dotted</Name>
+        <Style REF="22">
+          <StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc>
+            <Offset>0.0</Offset>
+          </StandardSymbology.StandardSigns.PolylineSignLineStyleAssoc>
+        </Style>
+      </StandardSymbology.StandardSigns.PolylineSign>
+
+      <!-- Surface Signs -->
+      <StandardSymbology.StandardSigns.SurfaceSign TID="5001">
+        <Name>Building</Name>
+        <FillColor REF="4"></FillColor>
+      </StandardSymbology.StandardSigns.SurfaceSign>
+
+      <StandardSymbology.StandardSigns.SurfaceSign TID="5002">
+        <Name>Street</Name>
+        <FillColor REF="3"></FillColor>
+      </StandardSymbology.StandardSigns.SurfaceSign>
+
+      <StandardSymbology.StandardSigns.SurfaceSign TID="5003">
+        <Name>Water</Name>
+        <FillColor REF="5"></FillColor>
+      </StandardSymbology.StandardSigns.SurfaceSign>
+
+      <StandardSymbology.StandardSigns.SurfaceSign TID="5005">
+        <Name>Other</Name>
+        <FillColor REF="2"></FillColor>
+      </StandardSymbology.StandardSigns.SurfaceSign>
+    </StandardSymbology.StandardSigns>
+    <!-- end of basket REFHANDB00000002 -->
+  </DATASECTION>
+</TRANSFER>
+

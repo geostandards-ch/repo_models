@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- File SwissTimeData.xml 2005-06-16 (http://www.interlis.ch/models)
+     2020-03-19 TID of association DaylightSavingTZOf removed -->
+
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.interlis.ch/INTERLIS2.3
+                              SwissTimeData.xsd">
+  <HEADERSECTION VERSION="2.3" SENDER="KOGIS">
+    <MODELS>
+      <MODEL NAME="Units" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+      <MODEL NAME="Time" URI="http://www.interlis.ch/models"
+             VERSION="2005-06-16"/>
+    </MODELS>
+
+    <ALIAS>
+      <ENTRIES FOR="Time">
+        <TAGENTRY FROM="Time.DayOfYear" TO="Time.DayOfYear"/>
+        <TAGENTRY FROM="Time.HMDiffWithinDay" TO="Time.HMDiffWithinDay"/>
+        <TAGENTRY FROM="Time.DSTransition" TO="Time.DSTransition"/>
+        <TAGENTRY FROM="Time.DaylightSavingPeriod" TO="Time.DaylightSavingPeriod"/>
+        <TAGENTRY FROM="Time.TimeZone" TO="Time.TimeZone"/>
+        <TAGENTRY FROM="Time.TimeZone.BaseTimeZone"
+                  TO="Time.TimeZone.BaseTimeZone"/>
+        <TAGENTRY FROM="Time.TimeZone.DaylightSavingTZ"
+                  TO="Time.TimeZone.DaylightSavingTZ"/>
+        <TAGENTRY FROM="Time.TimeZone.DaylightSavingTZOf"
+                  TO="Time.TimeZone.DaylightSavingTZOf"/>
+      </ENTRIES>
+    </ALIAS>
+
+    <COMMENT>
+      example dataset ili2 refmanual appendix G
+    </COMMENT>
+  </HEADERSECTION>
+
+  <DATASECTION>
+    <Time.TimeZone BID="BTimeZones">
+      <Time.TimeZone.BaseTimeZone TID="BTimeZones.MEZ">
+        <Name>MEZ</Name>
+        <DiffToUTC>-1:00</DiffToUTC>
+      </Time.TimeZone.BaseTimeZone>
+
+      <Time.TimeZone.DaylightSavingTZ TID="BTimeZones.MESZ">
+        <Name>MESZ</Name>
+        <Periods>
+          <Time.DaylightSavingPeriod>
+            <DSToUTC>-2:00</DSToUTC>
+            <From>1983</From>
+            <To>1995</To>
+            <DSStart>
+              <Time.DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <Time.DayOfYear>
+                    <Month>3</Month>
+                    <Day>25</Day>
+                  </Time.DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </Time.DSTransition>
+            </DSStart>
+            <DSEnd>
+              <Time.DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <Time.DayOfYear>
+                    <Month>9</Month>
+                    <Day>24</Day>
+                  </Time.DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </Time.DSTransition>
+            </DSEnd>
+          </Time.DaylightSavingPeriod>
+          <Time.DaylightSavingPeriod>
+            <DSToUTC>-2:00</DSToUTC>
+            <From>1996</From>
+            <To>2999</To>
+            <DSStart>
+              <Time.DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <Time.DayOfYear>
+                    <Month>3</Month>
+                    <Day>25</Day>
+                  </Time.DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </Time.DSTransition>
+            </DSStart>
+            <DSEnd>
+              <Time.DSTransition>
+                <TransitionDSTime>3:00</TransitionDSTime>
+                <FirstDate>
+                  <Time.DayOfYear>
+                    <Month>10</Month>
+                    <Day>25</Day>
+                  </Time.DayOfYear>
+                </FirstDate>
+                <DayOfWeek>Sunday</DayOfWeek>
+              </Time.DSTransition>
+            </DSEnd>
+          </Time.DaylightSavingPeriod>
+        </Periods>
+      </Time.TimeZone.DaylightSavingTZ>
+
+      <Time.TimeZone.DaylightSavingTZOf>
+        <BaseTZ REF="BTimeZones.MEZ"></BaseTZ>
+        <DSTZ REF="BTimeZones.MESZ"></DSTZ>
+      </Time.TimeZone.DaylightSavingTZOf>
+    </Time.TimeZone>
+  </DATASECTION>
+</TRANSFER>
+
