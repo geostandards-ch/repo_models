@@ -1,0 +1,61 @@
+name: Compile INTERLIS models
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  compile_all:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      
+    - name: setup java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        java-package: 'jre'
+
+    - name: setup ili2c
+      run: |
+        curl -O https://downloads.interlis.ch/ili2c/ili2c-5.6.3.zip
+        unzip ili2c-5.6.3.zip ili2c.jar
+
+    - name: compile ili23 files in geocat
+      env:
+        FILES: ./models/ili23/geocat/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili23 files in metamodel
+      env:
+        FILES: ./models/ili23/metamodel/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili23 files in refhb
+      env:
+        FILES: ./models/ili23/refhb/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili23 files in repo
+      env:
+        FILES: ./models/ili23/repo/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili23 files in tools
+      env:
+        FILES: ./models/ili23/tools/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili24 files in metamodel
+      env:
+        FILES: ./models/ili24/metamodel/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
+    - name: compile ili24 files in refhb
+      env:
+        FILES: ./models/ili24/refhb/*.ili
+      run: for f in $FILES; do java -jar ili2c.jar $f; done
+
