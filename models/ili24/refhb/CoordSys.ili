@@ -1,9 +1,12 @@
-!! File CoordSys.ili Release 2014-07-09
+!! File CoordSys.ili Release 2026-02-25
 
 INTERLIS 2.4;
 
+!! 2026-02-25 Range of Angle_DMS_S.Degree adapted to INTERLIS Standard
+!!@precursorVersion = 2014-07-09
+
 REFSYSTEM MODEL CoordSys (en) AT "http://www.interlis.ch/models/refhb24"
-  VERSION "2014-07-09" =
+  VERSION "2026-02-25" =
 
   UNIT
     Angle_Degree = 180 / PI [INTERLIS.rad];
@@ -11,7 +14,7 @@ REFSYSTEM MODEL CoordSys (en) AT "http://www.interlis.ch/models/refhb24"
     Angle_Second = 1 / 60 [Angle_Minute];
 
   STRUCTURE Angle_DMS_S =
-    Degrees: -180 .. 180 CIRCULAR [Angle_Degree];
+    Degrees: -179 .. 180 CIRCULAR [Angle_Degree];
     CONTINUOUS SUBDIVISION Minutes: 0 .. 59 CIRCULAR [Angle_Minute];
     CONTINUOUS SUBDIVISION Seconds: 0.000 .. 59.999 CIRCULAR [Angle_Second];
   END Angle_DMS_S;
