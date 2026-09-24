@@ -3,7 +3,7 @@
 INTERLIS 2.4;
 
 TYPE MODEL INTERLIS (en) AT "http://www.interlis.ch/"
-  VERSION "2024-04-24" =
+  VERSION "2026-09-03" =
 
   LINE FORM
     STRAIGHTS;
@@ -81,7 +81,7 @@ TYPE MODEL INTERLIS (en) AT "http://www.interlis.ch/"
                                            RESTRICTION (BAG OF ANYSTRUCTURE);
                      SurfaceAttr: ATTRIBUTE OF @ SurfaceBag 
                                            RESTRICTION (SURFACE)): BOOLEAN;
-  FUNCTION areAreas2 (Object: OBJECT OF ANYCLASS; 
+  FUNCTION areAreas2 (Objects: OBJECTS OF ANYCLASS; 
                       SurfaceBag: TEXT;
                       SurfaceAttr: TEXT): BOOLEAN;
   FUNCTION areAreasWithoutGaps (
@@ -91,7 +91,7 @@ TYPE MODEL INTERLIS (en) AT "http://www.interlis.ch/"
                      SurfaceAttr: ATTRIBUTE OF @ SurfaceBag 
                                            RESTRICTION (SURFACE)): BOOLEAN;
   FUNCTION areAreas2WithoutGaps2 (
-                      Object: OBJECT OF ANYCLASS; 
+                      Objects: OBJECTS OF ANYCLASS; 
                       SurfaceBag: TEXT;
                       SurfaceAttr: TEXT): BOOLEAN;
 
